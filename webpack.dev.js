@@ -1,0 +1,22 @@
+import { merge } from "webpack-merge";
+import common from "./webpack.common.js";
+
+export default merge(common, {
+  mode: "development",
+  output: {
+    filename: "main.js",
+  },
+  devtool: "eval-source-map",
+  devServer: {
+    static: "./dist",
+    watchFiles: ["./src/template.html"],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+});
