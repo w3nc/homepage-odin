@@ -1,0 +1,2 @@
+(()=>{"use strict";const t=document.documentElement,e=document.querySelector(".theme-toggle");function c(){const c="light"===t.getAttribute("data-theme");e.setAttribute("aria-label",c?"Switch to dark theme":"Switch to light theme")}e.addEventListener("click",()=>{const e="light"===t.getAttribute("data-theme")?"dark":"light";t.setAttribute("data-theme",e);try{localStorage.setItem("theme",e)}catch{}c()}),c()})();
+//# sourceMappingURL=main.9bfd848a9ecc05c855d6.js.map
